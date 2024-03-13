@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<head>
+<title>calsi</title>
+<style>
+body{
+    margin: auto;
+    padding :auto;
+    background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+}
+    .Container{
+        border: 5px solid black;
+        width:fit-content;
+        justify-content: center;
+        border-radius: 5px;
+        background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+        margin-left: 600px;
+        margin-top: 150px;
+        
+        
+    }
+input{
+outline:0;
+position:relative;
+left:5px;
+top:5px;
+right: 5px;
+border:0;
+color:#495069;
+background-color:#fff;
+border-radius:4px;
+width:60px;
+height:60px;
+float:left;
+margin:5px;
+font-size:20px;
+box-shadow:0 4px rgba(0,0,0,0,2);
+margin-bottom:15px;
+}
+input:hover{
+border:0 solid #000;
+color:#202128;
+background-color:#fff;
+border-radius:4px;
+width:60px;
+height:50px;
+float:left;
+margin:5px;
+font-size:20px;
+box-shadow:0 4px #b0d2cf;
+}
+input:active{
+top:4px;
+border:0 solid #000;
+color:#495069;
+background-color:#fff;
+border-radius:4px;
+width:60px;
+height:50px;
+float:left;
+margin:5px;
+font-size:20px;
+box-shadow:none;
+}
+#display{
+width:265px;
+max-width:270px;
+font-size:26px;
+text-align:right;
+background-color:#dbf20d;
+float:left;
+
+}
+#display:hover{
+width:270px;
+font-size:26px;
+text-align:right;
+background-color:#dbf20d;
+box-shadow:0 4px rgba(0,0,0,0.2);
+}
+#display:active{
+top:5px;
+width:270px;
+font-size:26px;
+background-color:#73ee00;
+box-shadow:0 4px rgba(0,0,0,0.2);
+}
+.operator{
+background-color:#f2c204;
+position:relative;
+}
+.operator:hover{
+background-color:#ceeaea;
+box-shadow:0 4px #107eec;
+}
+.operator:active{
+top:4px;
+box-shadow:none;
+}
+#clear{
+float:left;
+position:relative;
+display:block;
+background-color:#ff0000;
+}
+#clear:hover{
+float:left;
+display:block;
+background-color:#3a1dca;
+margin-bottom:15px;
+box-shadow:0 4px #3a1dca;
+}
+#clear:active{
+float:left;
+top:4px;
+display:block;
+background-color:#3a1dca;
+margin-bottom:15px;
+box-shadow:none;
+}
+</style>
+   </head>
+<body>
+                <form name="calculator">
+                    <div class="Container">
+                          <table>
+<tr>
+        <td colspan="4">
+                    <input type="text" name="display" id="display">
+         </td>
+</tr>
+<tr>
+<td>
+<input type="button" name="one" value="1" onclick="calculator.display.value+='1'">
+</td>
+<td>
+<input type="button" name="two" value="2" onclick="calculator.display.value+='2'">
+</td>
+<td>
+<input type="button" name="three" value="3" onclick="calculator.display.value+='3'">
+</td>
+<td>
+    <input type="button" class="operator" name="plus" value="+" onclick="calculator.display.value+='+'">
+</td>
+<tr>
+<td>
+<input type="button" name="four" value="4" onclick="calculator.display.value+='4'">
+</td>
+<td>
+<input type="button" name="five" value="5" onclick="calculator.display.value+='5'">
+</td>
+<td>
+<input type="button" name="six" value="6" onclick="calculator.display.value+='6'">
+</td>
+<td>
+    <input type="button" class="operator" name="minus" value="-" onclick="calculator.display.value+='-'">
+</td>
+</tr>
+<tr>
+<td>
+<input type="button" name="seven" value="7" onclick="calculator.display.value+='7'">
+</td>
+<td>
+<input type="button" name="eight" value="8" onclick="calculator.display.value+='8'">
+</td>
+<td>
+<input type="button" name="nine" value="9" onclick="calculator.display.value+='9'">
+</td>
+<td>
+<input type="button" class="operator" name="times" value="X" onclick="calculator.display.value+='*'">
+</td>
+</tr>
+<tr>
+<td>
+<input type="button" id="clear" name="clear" value="C" onclick="calculator.display.value =' '">
+</td>
+<td>
+<input type="button" name="zero" value="0" onclick="calculator.display.value+='0'">
+</td>
+<td>
+    <input type="button" name="doit" value="=" onclick="calculator.display.value=eval(calculator.display.value)">
+    <td>
+    <input type="button" class="operator" name="div" value="/" onclick="calculator.display.value+='/'">
+    </td>
+</tr>
+</div>
+</table>
+</form>
+</body>
+</html>
